@@ -1396,6 +1396,7 @@ static int ax88179_rx_fixup(struct usbnet *dev, struct sk_buff *skb)
 			skb_set_tail_pointer(ax_skb, ax_skb->len);
 
 			ax_skb->truesize = ax_skb->len + sizeof(struct sk_buff);
+
 			ax88179_rx_checksum(ax_skb, pkt_hdr);
 			usbnet_skb_return(dev, ax_skb);
 		} else {
