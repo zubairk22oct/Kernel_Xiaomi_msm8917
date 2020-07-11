@@ -665,7 +665,6 @@ ifdef CONFIG_CC_WERROR
 KBUILD_CFLAGS	+= -Werror
 endif
 
-
 # Kill array bound warnings
 KBUILD_CFLAGS	+= $(call cc-disable-warning,array-bounds,)
 
